@@ -1,9 +1,9 @@
 from ascii_art import logo
-from Caesar_cipher import encode, decode
+from Caesar_cipher import cipher
 
 print(logo)
 to_do = input("Enter 'encode' to encrypt a message, enter 'decode' to decrypt\n")
 message = input("Enter the message\n")
-shift = input("Enter shift number\n")
+shift = int(input("Enter shift number\n"))
 
-print("The message after {} is ".format(to_do) + eval(to_do + "('{}', {})".format(message, shift)))
+print("The message after {} is ".format(to_do) + cipher(message, shift, to_do))

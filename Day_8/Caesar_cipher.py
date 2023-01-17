@@ -2,14 +2,17 @@
 import string
 
 alphabet = list(string.ascii_lowercase)
+option_dict = {"encode": "+", "decode": "-"}
 
-def encode(message, shift):
+def cipher(message, shift, option):
 
     encoded_message = ""
-    for i in message:
+    for i in message.lower():
         
+        #shift = eval(option_dict[option] + str(shift))
         index_before = alphabet.index(i)
-        index_after = index_before + shift
+        # "5+10"
+        index_after = eval(str(index_before) + option_dict[option] + str(shift))
         if index_after > 25:
             index_after -= 26
 
@@ -17,13 +20,4 @@ def encode(message, shift):
     
     return encoded_message
 
-def decode(message, shift):
-    decoded_message = ""
-    for i in message:
-        
-        index_before = alphabet.index(i)
-        index_after = index_before - shift
-        
-        decoded_message += alphabet[index_after]
-    
-    return decoded_message
+print(cipher("hello", 7, "encode"))
