@@ -35,3 +35,10 @@ def start():
 
 
 start()
+
+
+def eat():
+    pass
+
+
+eat()
