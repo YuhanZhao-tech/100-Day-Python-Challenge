@@ -1,6 +1,7 @@
 from turtle import Turtle, Screen
 import random
 
+screen = Screen()
 color_string = ['red', 'green', 'cyan', 'yellow', 'magenta']
 turtles = [Turtle() for _ in range(5)]
 
@@ -8,7 +9,7 @@ for turtle in turtles:
     turtle.shape('turtle')
     turtle.resizemode('user')
     turtle.shapesize(2, 2, 1.5)
-screen = Screen()
+
 
 for i in range(len(turtles)):
     turtles[i].penup()
