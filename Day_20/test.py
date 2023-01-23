@@ -15,3 +15,5 @@ che = ['d', 'e']
 inv = inv+che
 print(inv)
 inv.sort()
+
+print([1, 2] == list((1, 2)))

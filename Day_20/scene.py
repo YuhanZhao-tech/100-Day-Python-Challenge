@@ -1,8 +1,15 @@
 from Snake import Snake
+from Snake_piece import SnakePiece, StageTurtle
 from turtle import Screen
 
 screen = Screen()
+screen.screensize(bg='yellow')
+screen.setup(836, 836)
+screen.setworldcoordinates(-418, -418, 418, 418)
+# screen_size_to_grid =
 screen.tracer(n=0)
+stage_turtle = StageTurtle()
+screen.update()
 snake = Snake()
 
 
