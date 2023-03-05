@@ -10,5 +10,7 @@ class AutomatedWriter():
 
     def generate_message(self) -> None:
         for names in self._name_list:
-            with open("./Output/ReadyToSend/{}".format("To_"+names.strip()), "w") as file:
-                file.write(self._structure.replace("[name]", names.strip()))
+            stripped_name = names.strip()
+
+            with open("./Output/ReadyToSend/{}".format("To_" + stripped_name), "w") as file:
+                file.write(self._structure.replace("[name]", stripped_name))
